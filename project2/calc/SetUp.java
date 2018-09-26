@@ -10,6 +10,7 @@ package calc;
  * CS 245, Wheaton College
  * June 27, 2014
 */
+
 public class SetUp {
 
 	/**
@@ -18,14 +19,20 @@ public class SetUp {
 	 * @param face The component representing the user interface of 
 	 * the calculator. 
 	 */
+	
+	
 	public static void setUpCalculator(CalculatorFace face) {
 
-		// delete this line.
-		face.writeToScreen("hello");
-		
-		
-		// add code here that will have the effect of connecting
-		// the given face to your calculator
+		face.addActionListener('1', new NumberListener("1", face));
+		face.addActionListener('2', new NumberListener("2", face));
+		face.addActionListener('3', new NumberListener("3", face));
+		face.addActionListener('4', new NumberListener("4", face));
+		face.addActionListener('5', new NumberListener("5", face));
+		face.addActionListener('6', new NumberListener("6", face));
+		face.addActionListener('7', new NumberListener("7", face));
+		face.addActionListener('8', new NumberListener("8", face));
+		face.addActionListener('9', new NumberListener("9", face));
+		face.addActionListener('0', new NumberListener("0", face));
 		
 		
 	}
