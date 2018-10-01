@@ -9,6 +9,7 @@ package calc;
  * @author Thomas VanDrunen
  * CS 245, Wheaton College
  * June 27, 2014
+ * Updated by noahwill September 27, 2018
 */
 
 public class SetUp {
@@ -19,40 +20,24 @@ public class SetUp {
 	 * @param face The component representing the user interface of 
 	 * the calculator. 
 	 */
-	
-	public NumberListener naught = new NumberListener(null, )
-	
 	public static void setUpCalculator(CalculatorFace face) {
 
-		NumberListener one = new NumberListener("1", face);
-		face.addActionListener('1', one);
+		Brain brain = new Brain(face);
 		
-		NumberListener two = new NumberListener("2", face);
-		face.addActionListener('2', two);
+		for(int i = 0; i < 10; i++) {
+			face.addNumberActionListener(i, new NumberListener(Integer.toString(i), brain));
+		}
 		
-		NumberListener three = new NumberListener("3", face);
-		face.addActionListener('3', three);
+		face.addActionListener('+', new OperatorListener("+", brain));
+		face.addActionListener('-', new OperatorListener("-", brain));
+		face.addActionListener('*', new OperatorListener("*", brain));
+		face.addActionListener('/', new OperatorListener("/", brain));
 		
-		NumberListener four = new NumberListener("4", face);
-		face.addActionListener('4', four);
+		face.addActionListener('.', new OtherListener(".", brain));
+		face.addActionListener('C', new OtherListener("C", brain));
+		face.addActionListener((char) 177, new PlusMinusListener(brain));
 		
-		NumberListener five = new NumberListener("5", face);
-		face.addActionListener('5', five);
-		
-		NumberListener six = new NumberListener("6", face);
-		face.addActionListener('6', six);
-		
-		NumberListener seven = new NumberListener("7", face);
-		face.addActionListener('7', seven);
-		
-		NumberListener eight = new NumberListener("8", face);
-		face.addActionListener('8', eight);
-		
-		NumberListener nine = new NumberListener("9", face);
-		face.addActionListener('9', nine);
-		
-		NumberListener zero = new NumberListener("0", face);
-		face.addActionListener('0', zero);
+		face.addActionListener('=', new EqualsListener(brain));
 	}
 	
 	

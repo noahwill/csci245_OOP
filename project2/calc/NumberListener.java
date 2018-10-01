@@ -2,47 +2,34 @@ package calc;
 
 import java.awt.event.*;
 
+/**
+ * NumberListener
+ * 
+ * Connects to the number {1, 2, 3, 4, 5, 6, 7, 8, 9, 0} buttons on the calculator
+ * and calls the setInput1 method of the class Brain.
+ * 
+ * @author noahwill
+ *
+ */
 public class NumberListener implements ActionListener{
 	
-	private NumberListener previous;
 	private String num;
-	private CalculatorFace face;
-	private String repeat;
-	private NumberListener next;
+	private Brain brain;
 	
-	
-	public NumberListener(NumberListener previous, String num, CalculatorFace face, NumberListener next) {
-		this.previous = previous;
+	/**
+	 * Constructor for the NumberListener class.
+	 * @param num
+	 * @param brain
+	 */
+	public NumberListener(String num, Brain brain) {
 		this.num = num;
-		this.face = face;
-		this.repeat = "";
-		this.next = next;
+		this.brain = brain;
 	}
-	
 
+	/**
+	 * Action performed method of the NumberListener class. 
+	 */
 	public void actionPerformed(ActionEvent e) {
-		repeat = repeat + num;
-		face.writeToScreen(repeat);
+		brain.setInput1(num);
 	}
-
-
-	public String getRepeat() {
-		return repeat;
-	}
-
-
-	public NumberListener getPrevious() {
-		return previous;
-	}
-
-
-	public NumberListener getNext() {
-		return next;
-	}
-
-
-	public void setNext(NumberListener next) {
-		this.next = next;
-	}
-
 }

@@ -3,7 +3,7 @@ package calc;
 /**
  * CalculatorFace.java
  *
- * Interface CalculatorFace to define how the 
+ * Interface CalculatorFace to define how the calculator face functions.
  *
  * @author Thomas VanDrunen
  * CS 245, Wheaton College
@@ -25,7 +25,7 @@ public interface CalculatorFace {
      * @param display The String to be displayed.
      */
     public void writeToScreen(String display);
-
+    
     /**
      * Add an action listener to the indicated button. This
      * accepts characters 0 1 2 3 4 5 6 7 8 9 . {+/-} + - * / = and C
