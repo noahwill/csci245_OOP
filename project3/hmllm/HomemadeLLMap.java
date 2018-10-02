@@ -9,8 +9,11 @@ import java.util.Iterator;
  * a completely-homemade linked list on the inside.
  * 
  * @author Thomas VanDrunen
+ * @author noahwill
  * CSCI 245, Wheaton College
  * June 30, 2014
+ *
+ * Updated: October 1, 2018
  */
 
 public class HomemadeLLMap implements HomemadeMap {
@@ -109,7 +112,7 @@ public class HomemadeLLMap implements HomemadeMap {
      * @return An iterator over the set of keys.
      */
     public Iterator<String> keyIterator() {
-    	return null;
+    	return new MapIterator();
     }
 
     

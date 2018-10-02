@@ -7,6 +7,7 @@ package hmllm;
  * 
  * @author noahwill
  *
+ * October 1, 2018
  */
 public class Node {
 	private String key;
