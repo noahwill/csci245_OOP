@@ -1,11 +1,13 @@
 package hmllm;
 
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 public class MapIterator implements Iterator<String> {
 	
 	private Node head;
-	private Node position = head;
+	private Node position;
+	private Node previous;
 	
 	public boolean hasNext() {
 		if(position != null)
@@ -15,9 +17,18 @@ public class MapIterator implements Iterator<String> {
 	}
 
 	public String next() {
-		if(this.hasNext())
-			return "hey";
-		return null;
+		
+		if(hasNext()) {
+			String keyReturn = position.getKey();
+			previous = position;
+			position = position.getLink();
+			return keyReturn;
+		}
+		
+		else 
+			return null;
+		
+		
 	}
 
 }
