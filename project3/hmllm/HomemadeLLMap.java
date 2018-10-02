@@ -2,8 +2,6 @@ package hmllm;
 
 import java.util.Iterator;
 
-import com.sun.xml.internal.ws.dump.LoggingDumpTube.Position;
-
 /**
  * HomemadeLLMap
  * 
@@ -38,7 +36,23 @@ public class HomemadeLLMap implements HomemadeMap {
 		return count;
 	}
 	
-	
+	/**
+	 * Finds Node containing the given key.
+	 * @param key
+	 * @return node with the key
+	 */
+	public Node keyFinder(String key) {
+		Node position = head;
+		String keyFound;
+		
+		while (position != null) {
+			keyFound = position.getKey();
+			if (keyFound.equals(key))
+				break;
+			position = position.getLink();
+		}
+		return position;
+	}
 	
     /**
      * Test whether an association exists for this key.
@@ -46,16 +60,11 @@ public class HomemadeLLMap implements HomemadeMap {
      * @return true if there is an association for this key, false otherwise
      */
     public boolean containsKey(String key) {
-    	Node position = head;
-    	String keyFound;
-    	
-    	while (position != null) {
-    		keyFound = position.getKey();
-    		if (keyFound.equals(key))
+    	Node position = keyFinder(key);
+    	if (position != null)
     			return true;
-    		position = position.getLink();
-    	}
-    	return false;
+    	else	
+    		return false;
     }
    
 
@@ -65,22 +74,15 @@ public class HomemadeLLMap implements HomemadeMap {
      * @param val The value to which this key is associated
      */
     public void put(String key, String val) {
-    	Node position = head;
-    	String keyFound;
     	
     	if (!containsKey(key)) {
     		head = new Node(key, val, head);
     	}
 
     	else {
-    		while (position != null) {
-    			keyFound = position.getKey();
-    			if(keyFound.equals(key))
-    				position.setVal(val);
-    		}
+    		Node position = keyFinder(key);
+    		position.setVal(val);
     	}
-    		
-    	
     }  
 
     /**
