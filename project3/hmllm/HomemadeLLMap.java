@@ -91,7 +91,17 @@ public class HomemadeLLMap implements HomemadeMap {
      * @return The value associated with this key, null if none exists
      */
     public String get(String key) {
-    	return null;
+    	String val;
+    	
+    	if (!containsKey(key))
+    		return null;
+    	
+    	else {
+    	  	Node position = keyFinder(key);
+        	val = position.getVal();
+    	}
+  
+    	return val;
     }
 
     /**
