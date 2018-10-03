@@ -112,7 +112,7 @@ public class HomemadeLLMap implements HomemadeMap {
      * @return An iterator over the set of keys.
      */
     public Iterator<String> keyIterator() {
-    	return new MapIterator();
+    	return new MapIterator(head);
     }
 
     
@@ -121,6 +121,21 @@ public class HomemadeLLMap implements HomemadeMap {
      * @param key The key to remove
      */   
     public void remove(String key) {
+    	int size = size();
+    	Node position = keyFinder(key);
+    	
+    	if (size == 0 || !containsKey(key)) {
+    		return;
+    	}
+    	
+    	else if (position == head) {
+    		head = position.getLink();
+    	}
+    	
+    	else if (position.getLink() == null) {
+    		
+    	}
+    	
     }
 
 
