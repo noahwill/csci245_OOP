@@ -1,7 +1,6 @@
 package hmllm;
 
 import java.util.Iterator;
-import java.util.NoSuchElementException;
 
 /**
  * Iterator class for the HomemadeLLMap
@@ -36,12 +35,14 @@ public class MapIterator implements Iterator<String> {
 	public String next() {
 		if(hasNext()) {
 			String keyReturn = head.getKey();
-			head = head.getLink();
+			head = head.getNext();
 			return keyReturn;
 		}
 		
 		else 
 			return null;
 	}
+	
+	
 
 }

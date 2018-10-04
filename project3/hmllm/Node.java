@@ -12,7 +12,7 @@ package hmllm;
 public class Node {
 	private String key;
 	private String val;
-	private Node link;
+	private Node next;
 	
 	/**
 	 * Constructor for the Node Class
@@ -20,10 +20,10 @@ public class Node {
 	 * @param key
 	 * @param value
 	 */
-	public Node(String key, String val, Node link) {
+	public Node(String key, String val, Node next) {
 		this.key = key;
 		this.setVal(val);
-		this.setLink(link);
+		this.setNext(next);
 	}
 
 	/**
@@ -58,8 +58,8 @@ public class Node {
 	 * 
 	 * @return
 	 */
-	public Node getLink() {
-		return link;
+	public Node getNext() {
+		return next;
 	}
 
 	/**
@@ -67,8 +67,8 @@ public class Node {
 	 * 
 	 * @param link
 	 */
-	public void setLink(Node link) {
-		this.link = link;
+	public void setNext(Node next) {
+		this.next = next;
 	}
-
+	
 }

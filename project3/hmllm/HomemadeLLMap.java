@@ -34,7 +34,7 @@ public class HomemadeLLMap implements HomemadeMap {
 		
 		while (position != null) {
 			count++;
-			position = position.getLink();
+			position = position.getNext();
 		}
 		return count;
 	}
@@ -52,7 +52,7 @@ public class HomemadeLLMap implements HomemadeMap {
 			keyFound = position.getKey();
 			if (keyFound.equals(key))
 				break;
-			position = position.getLink();
+			position = position.getNext();
 		}
 		return position;
 	}
@@ -80,6 +80,7 @@ public class HomemadeLLMap implements HomemadeMap {
     	
     	if (!containsKey(key)) {
     		head = new Node(key, val, head);
+    		
     	}
 
     	else {
@@ -115,7 +116,6 @@ public class HomemadeLLMap implements HomemadeMap {
     	return new MapIterator(head);
     }
 
-    
     /**
      * Remove the association for this key.
      * @param key The key to remove
@@ -124,17 +124,27 @@ public class HomemadeLLMap implements HomemadeMap {
     	int size = size();
     	Node position = keyFinder(key);
     	
-    	if (size == 0 || !containsKey(key)) {
+    	if (size == 0) {
     		return;
     	}
     	
     	else if (position == head) {
-    		head = position.getLink();
+    		head = position.getNext();
     	}
     	
-    	else if (position.getLink() == null) {
-    		
+    	Node temp = head; 
+    	Node prev = null;
+ 
+    	if (head == null || !containsKey(key)) {
+    		return;
     	}
+
+    	while (temp != null && !temp.getKey().equals(key)) {
+    		prev = temp;
+    		temp = temp.getNext();
+    	}
+
+    	prev.setNext(temp.getNext());	
     	
     }
 
