@@ -1,0 +1,94 @@
+<<<Notes>>>
+*author: superorganism*
+
+entrance (foyer) and
+anteroom already included (thanks Noah).
+
+<<<Data>>>
+
+<<Rooms>>
+-viewingroom-
+Viewing Room
+Looks out over the aquarium lawn. A dreary world where no one can swim.
+Your mind wanders to your home where you dreamed of one day becoming a
+creature that could swim...
+
+-shrine-
+Shrine Room
+There is a shrine in the middle of the room. To the east there is a massive
+hole in the floor keeping you from the door that way, but there is an open 
+door to the west.
+
+-creatureitem-
+Neptune Room
+The room is dimly lit, decorated in the mid-century style, and has a regal
+and sea foam feel to it. In the back of the room, there is a ladder with 
+some dark liquid on it... A massive creature leaps from the shadows! It 
+looks like a sea turtle in  armour with a harpoon!! It is attacking, you 
+need to react fast!
+
+-squidroom-
+Squid Room
+You climb up the ladder. At the top you are greeted with the roar of a Kraken!
+The beast moves its slimy tentacles to block the ladder. You'll have to defeat
+it to be able to go back down. There doesn't seem to be any other exit.
+
+-held-
+held
+held
+
+-end-
+end
+end
+
+<<Directions,Creatures>>
+
++held
+item harpoon
+Stabs stuff good.
+spear Kill
+
++entrance
+north shrine
+south viewingroom
+
++viewingroom
+north entrance
+
+item rope
+A bundle of rope.
+bridge Bridge
+
++shrine
+south entrance
+west creatureitem
+
+item sign
+static The sign reads: "To the brave adventurers who have come before you."
+noability
+
++creatureitem
+east shrine
+up squidroom
+
+creature turtle knight
+Vicious and quick. It will probably impale you while you're reading this. 
+up harpoon
+
++squidroom
+down creatureitem
+
+creature squid
+Pale and slimy in the dull light of this strangely apt room for a boss fight...
+down
+
+item sign
+static The sign reads: "The giant squid of legend, the Kraken, is said to have been 15 meters in length."
+noability
+
++antechamber
+west shrine
+
+item flippers
+So you can doggy paddle!
+swim Swim
