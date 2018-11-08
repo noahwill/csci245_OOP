@@ -1,0 +1,43 @@
+<<<Data>>>
+
++sea cucumber
+-0 end-
+end
+-10000 slash
+The sea cucumber explodes, it was a pretty lame opponent.
+-0 end-
+end
+
++turtle knight
+-6000 slash
+The lightning quick turtle dodges and blocks your feeble attempt at defending yourself.
+-4000 slash
+Somehow, you land a lucky blow and the turtle turns into a nice bowl of soup.
+-0 end-
+end
+
++piranha swarm
+-3000 spear
+You successfully skewer the first wave of piranha 
+-3000 spear
+It seems like they are getting faster and faster, can you keep up?
+-3000 spear
+The last wave defeated, you are filled with triumph!
+-0 end-
+end
+
++squid
+-5000 slash
+You slash off one of the Kraken tentacles as it tries to smash your head in. Here comes another!
+-2000 slash
+That swipe was quicker, but you managed to slash that tentacle off too! 
+-3000 spear
+You pin the Kraken to the wall so it can't escape your final blow.
+-1500 smash
+You smash the Kraken, the mortal enemy of all whales everywhere to smitherines!
+-0 end-
+end
+
++DNE
+
++end

@@ -1,0 +1,30 @@
+<<<Configuration File>>>
+*author superorganism*
+
+<<<Data>>>
+
+north n
+south s
+east e
+west w
+up u
+down d
+
+-Floors-
+0 Basement.txt
+1 Floor1.txt
+2 Floor2.txt
+3 Floor3.txt
+
+-Initial Commands-
+help Help
+get Get
+look Look
+inventory Inventory
+
+-Whale Items-
+jaw
+eye
+body
+flippers
+tail

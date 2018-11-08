@@ -1,0 +1,66 @@
+*author: superorganism*
+
+<<<Data>>>
+
+<<Rooms>>
+-pool1-
+Drippy Pool
+Who knows where all this water is coming from... Thankfully you found 
+those flippers to swim with, otherwise you might have drowned. Just 
+poking above the water level, there is a door frame to the north and 
+one to the west. You should probably keep swimming if you want to go 
+that way.
+
+-pool2-
+Deep Pool
+This pool is much deeper than the last. There is something shining at the
+bottom. Maybe you could dive for it? There is the door frame you just swam 
+through to the south.
+
+-pool3-
+Infested Pool
+Swimming in this pool sparks some kind of fight or flight feeling. You don't
+feel safe swimming for the door frame to the south. Maybe you should go back 
+or look around. 
+
+-pool4-
+Island Pool
+There is a concrete island in the middle of this pool. A single beam of light
+from a crack above shines on the island. here is the door frame you just swam 
+through to the north.
+
+-end-
+end
+end
+
+<<Directions,Creatures>>
+
++antechamber
+north pool1
+
++pool1
+north pool2
+west pool3
+south antechamber
+
++pool2
+south pool1
+
++pool3
+east pool1
+south pool4
+
+creature piranha swarm
+Industrial strength chompers on those guys...
+south
+
+item sign
+static The sign reads: "Beware those, the swift and dangerous, below"
+noability
+
++pool4
+north pool3
+
+item body
+The body of a whale.
+dive Dive

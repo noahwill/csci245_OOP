@@ -1,0 +1,46 @@
+<<<Notes>>>
+*author: superorganism*
+
+This is a template to briefly explain how the floor input works.
+
+To start, nothing above "<<<Data>>>" will affect the files for the game at all.
+
+<<<Data>>>
+
+<<Rooms>>
+-refnameofroom-
+titleofroom
+roomdescriptionline1
+...
+roomdescriptionlastline
+
+-eg. ballroom-
+Ballroom
+The door is closed behind you, more doors to the east 
+and west. There is a sign in the middle of the room.
+
+
+<<Directions,Creatures>>
+*Key to begin second part of the data input*
+
++refnameofroom
+	//Same as above
+direction destination
+dir2 dest2
+...
+lastdir lastdest
+
++eg. creatureRoom1
+east ballroom
+south deadEnd1
+
+creature sea cucumber
+Larger than a breadbox but smaller than a caboose.
+notdangerous
+
++antechamber
+west ballroom
+
+item sword
+Forged from the finest mercury
+slash Kill

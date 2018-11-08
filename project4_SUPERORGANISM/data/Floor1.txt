@@ -1,0 +1,78 @@
+<<<Notes>>>
+*author: superorganism*
+
+entrance (foyer) and
+anteroom already included (thanks Noah).
+
+<<<Data>>>
+
+<<Rooms>>
+
+-closet-
+Closet
+Just big enough for one, it smells like moth-balls and herring.
+
+-ballroom-
+Ballroom
+The door is closed behind you, more doors to the east and west. Perhaps,
+in another time, people who really appreciated aquatic life held grand
+parties in this room. You can almost hear the scholars debating the origins
+of the Balanaea mysticetus versus the Caperea marginata.
+
+-creatureRoom1-
+Creaky Room
+The loose floor boards creak as you enter the room, causing a mass to stir
+on the south side. Looking closer you see giant Sea Cucumber blocking a 
+door to the south. It looks like its attacking, but slowly...
+
+-deadend1-
+Spooky Dead End
+There are no doors besides the one you came through. There's a chill in the
+air, it smells like destiny and storage in here.
+
+-end-
+end
+end
+
+<<Directions,Creatures>>
+
++entrance
+east closet
+north ballroom
+
++closet
+west entrance
+
+item eye
+The eye of a large mammalian creature.
+examine Examine
+
++ballroom
+south entrance
+west creatureRoom1
+east antechamber
+
+item sign
+static The sign says: "If you can read this, you are well on your way to becoming a whale!"
+noability
+
++creatureRoom1
+east ballroom
+south deadend1
+
+creature sea cucumber
+Larger than a breadbox but smaller than a caboose.
+south
+
++deadend1
+north creatureRoom1
+item key
+A little brass key with a mermaid on it. It unlocks the door in the antechamber.
+unlock Unlock
+
++antechamber
+west ballroom
+
+item sword
+Forged from the finest mercury.
+slash Kill

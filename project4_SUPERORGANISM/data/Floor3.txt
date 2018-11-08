@@ -1,0 +1,30 @@
+<<<Notes>>>
+*author: superorganism*
+
+entrance (foyer) and
+anteroom already included (thanks Noah).
+
+<<<Data>>>
+
+<<Rooms>>
+#The Glorious Oceanic Maze#
+west entrance
+Every room seems to be the same . . .
+6 2
+
+-end-
+end
+end
+
+<<Directions,Creatures>>
++entrance
+west The Glorious Oceanic Maze entrance
+
+item sign
+static The sign reads: "Can you find your way to the center of the maze? There should be a prize waiting for you there!"
+noability
+
++The Glorious Oceanic Maze exit
+item jaw
+The jaw of a large mammalian creature.
+speak Speak
