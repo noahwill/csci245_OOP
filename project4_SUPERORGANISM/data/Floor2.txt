@@ -37,6 +37,10 @@ it to be able to go back down. There doesn't seem to be any other exit.
 held
 held
 
+-held2-
+held
+held
+
 -end-
 end
 end
@@ -47,6 +51,11 @@ end
 item harpoon
 Stabs stuff good.
 spear Kill
+
++held2
+item squidskull
+A trophy to fill the entire mantle.
+noability
 
 +entrance
 north shrine
@@ -80,7 +89,7 @@ down creatureitem
 
 creature squid
 Pale and slimy in the dull light of this strangely apt room for a boss fight...
-down
+down squidskull
 
 item sign
 static The sign reads: "The giant squid of legend, the Kraken, is said to have been 15 meters in length."
